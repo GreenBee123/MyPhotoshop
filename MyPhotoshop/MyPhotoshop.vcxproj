@@ -118,6 +118,7 @@
     <ClCompile Include="QR_Codeclass.cpp" />
     <ClCompile Include="ScreenShotclass.cpp" />
     <ClCompile Include="Snow_Special_Effectsclass.cpp" />
+    <ClCompile Include="Word_Processingclass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h" />
@@ -127,6 +128,7 @@
     <QtUic Include="QR_Codeclass.ui" />
     <QtUic Include="ScreenShotclass.ui" />
     <QtUic Include="Snow_Special_Effectsclass.ui" />
+    <QtUic Include="Word_Processingclass.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="MyPhotoshop.qrc" />
@@ -145,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Snow_Special_Effectsclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Word_Processingclass.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
     </QtMoc>

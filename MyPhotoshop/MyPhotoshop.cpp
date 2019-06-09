@@ -20,6 +20,7 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(QR_Code_MyPhotoshop_sendData(QString)), Pqr_Code, SLOT(QR_Code_receiveData(QString)));
 	connect(this, SIGNAL(ScreenShot_MyPhotoshop_sendData(QString)), Pscreenshot, SLOT(ScreenShot_receiveData(QString)));
 	connect(this, SIGNAL(Snow_Special_Effects_sendData(QString)), Psnow_special_effects, SLOT(Snow_Special_Effects_receiveData(QString)));
+	connect(this, SIGNAL(Word_Processing_sendData(QString)), Pword_processing, SLOT(Word_Processing_receiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -391,6 +392,13 @@ void MyPhotoshop::Trademark_Watermark()
 
 void MyPhotoshop::Word_Processing()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit Word_Processing_sendData(QString::fromStdString(name));
+		Pword_processing->show();
+	}
 }
 
 void MyPhotoshop::Discrete_Fourier_Transform()
