@@ -7,6 +7,9 @@
 #include"Snow_Special_Effectsclass.h"
 #include"Word_Processingclass.h"
 #include"Sobel_Operatorclass.h"
+#include"Laplacian_Operatorclass.h"
+#include"Canny_EdgeDetectionclass.h"
+#include"hough_Line_Transformationclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -37,6 +40,9 @@ signals:
 	void Snow_Special_Effects_sendData(QString);
 	void Word_Processing_sendData(QString);
 	void Sobel_Operator_sendData(QString);
+	void Laplacian_Operator_sendData(QString);
+	void Canny_EdgeDetection_sendData(QString);
+	void hough_Line_Transformationr_sendData(QString);
 
 private slots:
 
@@ -53,6 +59,7 @@ private slots:
 
 	void Sobel_Operator();//sobel算子
 	void Laplacian_Operator();//拉普拉斯算子
+	void Canny_EdgeDetection();
 	void Hough_Line_Transformation();//霍夫线变换
 	void Hough_Circle_Transformation();//霍夫圆变换
 	void Finding_Image_Contour();//寻找图像轮廓
@@ -107,6 +114,7 @@ private:
 
 	QAction *sobel_Operator;//sobel算子
 	QAction *laplacian_Operator;//拉普拉斯算子
+	QAction *canny_EdgeDetection;
 	QAction *hough_Line_Transformation;//霍夫线变换
 	QAction *hough_Circle_Transformation;//霍夫圆变换
 	QAction *finding_Image_Contour;//寻找图像轮廓
@@ -143,4 +151,7 @@ private:
 	Snow_Special_Effectsclass *Psnow_special_effects = new Snow_Special_Effectsclass;
 	Word_Processingclass *Pword_processing = new Word_Processingclass;
 	Sobel_Operatorclass *Psobel_operator = new Sobel_Operatorclass;
+	Laplacian_Operatorclass *Plaplacian_operator = new Laplacian_Operatorclass;
+	Canny_EdgeDetectionclass *Pcanny_edgedetection = new Canny_EdgeDetectionclass;
+	hough_Line_Transformationclass *Phough_line_rransformation = new hough_Line_Transformationclass;
 };

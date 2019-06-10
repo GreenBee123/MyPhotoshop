@@ -51,6 +51,15 @@
     <ClCompile Include="Sobel_Operatorclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Laplacian_Operatorclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Canny_EdgeDetectionclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hough_Line_Transformationclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -71,6 +80,15 @@
     <QtMoc Include="Sobel_Operatorclass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Laplacian_Operatorclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Canny_EdgeDetectionclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="hough_Line_Transformationclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -89,6 +107,15 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="Sobel_Operatorclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Laplacian_Operatorclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Canny_EdgeDetectionclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="hough_Line_Transformationclass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

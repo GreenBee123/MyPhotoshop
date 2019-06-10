@@ -1,0 +1,23 @@
+<UI version="4.0" >
+ <class>hough_Line_Transformationclass</class>
+ <widget class="QWidget" name="hough_Line_Transformationclass" >
+  <property name="objectName" >
+   <string notr="true">hough_Line_Transformationclass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>400</width>
+	<height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>hough_Line_Transformationclass</string>
+  </property>
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</UI>

@@ -22,6 +22,9 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(Snow_Special_Effects_sendData(QString)), Psnow_special_effects, SLOT(Snow_Special_Effects_receiveData(QString)));
 	connect(this, SIGNAL(Word_Processing_sendData(QString)), Pword_processing, SLOT(Word_Processing_receiveData(QString)));
 	connect(this, SIGNAL(Sobel_Operator_sendData(QString)), Psobel_operator, SLOT(Sobel_Operator_receiveData(QString)));
+	connect(this, SIGNAL(Laplacian_Operator_sendData(QString)), Plaplacian_operator, SLOT(Laplacian_Operator_receiveData(QString)));
+	connect(this, SIGNAL(Canny_EdgeDetection_sendData(QString)), Pcanny_edgedetection, SLOT(Canny_EdgeDetection_receiveData(QString)));
+	connect(this, SIGNAL(hough_Line_Transformationr_sendData(QString)), Pcanny_edgedetection, SLOT(hough_Line_Transformationr_receiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -71,6 +74,10 @@ void MyPhotoshop::addMenubar() {
 	laplacian_Operator = new QAction(this);
 	laplacian_Operator->setText(QString::fromLocal8Bit("À­ÆÕÀ­Ë¹Ëã×Ó"));
 	connect(laplacian_Operator, SIGNAL(triggered()), this, SLOT(Laplacian_Operator()));
+
+	canny_EdgeDetection = new QAction(this);
+	canny_EdgeDetection->setText(QString::fromLocal8Bit("CannyÍ¼Ïñ±ßÔµ¼ì²â"));
+	connect(canny_EdgeDetection, SIGNAL(triggered()), this, SLOT(Canny_EdgeDetection()));
 
 	hough_Line_Transformation = new QAction(this);
 	hough_Line_Transformation->setText(QString::fromLocal8Bit("»ô·òÏß±ä»»"));
@@ -224,6 +231,7 @@ void MyPhotoshop::addMenubar() {
 	edgeDetectionMenu = menuBar()->addMenu(QString::fromLocal8Bit("±ßÔµ¼ì²â"));
 	edgeDetectionMenu->addAction(sobel_Operator);
 	edgeDetectionMenu->addAction(laplacian_Operator);
+	edgeDetectionMenu->addAction(canny_EdgeDetection);
 	edgeDetectionMenu->addAction(hough_Line_Transformation);
 	edgeDetectionMenu->addAction(hough_Circle_Transformation);
 	edgeDetectionMenu->addAction(finding_Image_Contour);
@@ -419,10 +427,35 @@ void MyPhotoshop::Sobel_Operator()
 
 void MyPhotoshop::Laplacian_Operator()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit Laplacian_Operator_sendData(QString::fromStdString(name));
+		Plaplacian_operator->show();
+	}
+}
+
+void MyPhotoshop::Canny_EdgeDetection()
+{
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit Canny_EdgeDetection_sendData(QString::fromStdString(name));
+		Pcanny_edgedetection->show();
+	}
 }
 
 void MyPhotoshop::Hough_Line_Transformation()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit hough_Line_Transformationr_sendData(QString::fromStdString(name));
+		Phough_line_rransformation->show();
+	}
 }
 
 void MyPhotoshop::Hough_Circle_Transformation()
