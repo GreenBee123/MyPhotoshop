@@ -21,6 +21,7 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(ScreenShot_MyPhotoshop_sendData(QString)), Pscreenshot, SLOT(ScreenShot_receiveData(QString)));
 	connect(this, SIGNAL(Snow_Special_Effects_sendData(QString)), Psnow_special_effects, SLOT(Snow_Special_Effects_receiveData(QString)));
 	connect(this, SIGNAL(Word_Processing_sendData(QString)), Pword_processing, SLOT(Word_Processing_receiveData(QString)));
+	connect(this, SIGNAL(Sobel_Operator_sendData(QString)), Psobel_operator, SLOT(Sobel_Operator_receiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -407,7 +408,13 @@ void MyPhotoshop::Discrete_Fourier_Transform()
 
 void MyPhotoshop::Sobel_Operator()
 {
-
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit Sobel_Operator_sendData(QString::fromStdString(name));
+		Psobel_operator->show();
+	}
 }
 
 void MyPhotoshop::Laplacian_Operator()

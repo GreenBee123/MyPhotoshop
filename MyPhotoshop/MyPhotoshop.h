@@ -6,6 +6,7 @@
 #include"ScreenShotclass.h"
 #include"Snow_Special_Effectsclass.h"
 #include"Word_Processingclass.h"
+#include"Sobel_Operatorclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -35,6 +36,7 @@ signals:
 	void ScreenShot_MyPhotoshop_sendData(QString);
 	void Snow_Special_Effects_sendData(QString);
 	void Word_Processing_sendData(QString);
+	void Sobel_Operator_sendData(QString);
 
 private slots:
 
@@ -140,4 +142,5 @@ private:
 	ScreenShotclass *Pscreenshot = new ScreenShotclass;
 	Snow_Special_Effectsclass *Psnow_special_effects = new Snow_Special_Effectsclass;
 	Word_Processingclass *Pword_processing = new Word_Processingclass;
+	Sobel_Operatorclass *Psobel_operator = new Sobel_Operatorclass;
 };
