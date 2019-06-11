@@ -60,6 +60,12 @@
     <ClCompile Include="hough_Line_Transformationclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hough_Circle_Transformationclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="finding_Image_Contourclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -89,6 +95,12 @@
     <QtMoc Include="hough_Line_Transformationclass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="hough_Circle_Transformationclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="finding_Image_Contourclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -116,6 +128,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="hough_Line_Transformationclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="hough_Circle_Transformationclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="finding_Image_Contourclass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

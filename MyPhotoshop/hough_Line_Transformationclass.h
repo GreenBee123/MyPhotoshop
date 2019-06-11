@@ -12,7 +12,8 @@ public:
 	~hough_Line_Transformationclass();
 
 public slots:
-	void hough_Line_Transformationr_receiveData(QString data);
+	void hough_Line_Transformation_receiveData(QString data);
+	void on_Canny_EdgeDetectionSlider_valueChanged(int value);
 
 private:
 	Ui::hough_Line_Transformationclass ui;

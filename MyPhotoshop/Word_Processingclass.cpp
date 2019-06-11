@@ -38,6 +38,7 @@ int fontFace_check(QString fontFace) {
 	else if (fontFace == "script_complex") {
 		return CV_FONT_HERSHEY_SCRIPT_COMPLEX;
 	}
+	return 0;
 }	
 
 Mat image_word_processing;

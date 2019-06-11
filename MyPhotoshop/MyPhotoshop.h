@@ -10,6 +10,8 @@
 #include"Laplacian_Operatorclass.h"
 #include"Canny_EdgeDetectionclass.h"
 #include"hough_Line_Transformationclass.h"
+#include"hough_Circle_Transformationclass.h"
+#include"finding_Image_Contourclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -42,7 +44,9 @@ signals:
 	void Sobel_Operator_sendData(QString);
 	void Laplacian_Operator_sendData(QString);
 	void Canny_EdgeDetection_sendData(QString);
-	void hough_Line_Transformationr_sendData(QString);
+	void hough_Line_Transformation_sendData(QString);
+	void hough_Circle_Transformation_sendData(QString);
+	void finding_Image_Contour_sendData(QString);
 
 private slots:
 
@@ -154,4 +158,6 @@ private:
 	Laplacian_Operatorclass *Plaplacian_operator = new Laplacian_Operatorclass;
 	Canny_EdgeDetectionclass *Pcanny_edgedetection = new Canny_EdgeDetectionclass;
 	hough_Line_Transformationclass *Phough_line_rransformation = new hough_Line_Transformationclass;
+	hough_Circle_Transformationclass *Phough_circle_transformation = new hough_Circle_Transformationclass;
+	finding_Image_Contourclass *Pfinding_image_contour = new finding_Image_Contourclass;
 };

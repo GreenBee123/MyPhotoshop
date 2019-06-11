@@ -114,6 +114,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Canny_EdgeDetectionclass.cpp" />
+    <ClCompile Include="finding_Image_Contourclass.cpp" />
+    <ClCompile Include="hough_Circle_Transformationclass.cpp" />
     <ClCompile Include="hough_Line_Transformationclass.cpp" />
     <ClCompile Include="Laplacian_Operatorclass.cpp" />
     <ClCompile Include="main.cpp" />
@@ -129,6 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="Canny_EdgeDetectionclass.ui" />
+    <QtUic Include="finding_Image_Contourclass.ui" />
+    <QtUic Include="hough_Circle_Transformationclass.ui" />
     <QtUic Include="hough_Line_Transformationclass.ui" />
     <QtUic Include="Laplacian_Operatorclass.ui" />
     <QtUic Include="MyPhotoshop.ui" />
@@ -185,6 +189,18 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="hough_Line_Transformationclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="hough_Circle_Transformationclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="finding_Image_Contourclass.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
     </QtMoc>

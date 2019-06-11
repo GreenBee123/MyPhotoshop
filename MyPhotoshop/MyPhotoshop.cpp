@@ -24,7 +24,10 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(Sobel_Operator_sendData(QString)), Psobel_operator, SLOT(Sobel_Operator_receiveData(QString)));
 	connect(this, SIGNAL(Laplacian_Operator_sendData(QString)), Plaplacian_operator, SLOT(Laplacian_Operator_receiveData(QString)));
 	connect(this, SIGNAL(Canny_EdgeDetection_sendData(QString)), Pcanny_edgedetection, SLOT(Canny_EdgeDetection_receiveData(QString)));
-	connect(this, SIGNAL(hough_Line_Transformationr_sendData(QString)), Pcanny_edgedetection, SLOT(hough_Line_Transformationr_receiveData(QString)));
+	connect(this, SIGNAL(hough_Line_Transformation_sendData(QString)), Phough_line_rransformation, SLOT(hough_Line_Transformation_receiveData(QString)));
+	connect(this, SIGNAL(hough_Circle_Transformation_sendData(QString)), Phough_circle_transformation, SLOT(hough_Circle_Transformation_receiveData(QString)));
+	connect(this, SIGNAL(finding_Image_Contour_sendData(QString)), Pfinding_image_contour, SLOT(finding_Image_Contour_receiveData(QString)));
+
 }
 
 void MyPhotoshop::addMenubar() {
@@ -85,10 +88,10 @@ void MyPhotoshop::addMenubar() {
 
 	hough_Circle_Transformation = new QAction(this);
 	hough_Circle_Transformation->setText(QString::fromLocal8Bit("»ô·òÔ²±ä»»"));
-	connect(word_Processing, SIGNAL(triggered()), this, SLOT(Hough_Circle_Transformation()));
+	connect(hough_Circle_Transformation, SIGNAL(triggered()), this, SLOT(Hough_Circle_Transformation()));
 
 	finding_Image_Contour = new QAction(this);
-	finding_Image_Contour->setText(QString::fromLocal8Bit("Ñ°ÕÒÍ¼ÏñÂÖÀª"));
+	finding_Image_Contour->setText(QString::fromLocal8Bit("×ÛºÏÓ¦ÓÃ£ºÑ°ÕÒ³µÅÆÎ»ÖÃ"));
 	connect(finding_Image_Contour, SIGNAL(triggered()), this, SLOT(Finding_Image_Contour()));
 
 	create_RectanglesAndEllipses = new QAction(this);
@@ -453,17 +456,31 @@ void MyPhotoshop::Hough_Line_Transformation()
 		no_ImageData();
 	}
 	else {
-		emit hough_Line_Transformationr_sendData(QString::fromStdString(name));
+		emit hough_Line_Transformation_sendData(QString::fromStdString(name));
 		Phough_line_rransformation->show();
 	}
 }
 
 void MyPhotoshop::Hough_Circle_Transformation()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit hough_Circle_Transformation_sendData(QString::fromStdString(name));
+		Phough_circle_transformation->show();
+	}
 }
 
 void MyPhotoshop::Finding_Image_Contour()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit finding_Image_Contour_sendData(QString::fromStdString(name));
+		Pfinding_image_contour->show();
+	}
 }
 
 void MyPhotoshop::Create_RectanglesAndEllipses()
