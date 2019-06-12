@@ -12,6 +12,8 @@
 #include"hough_Line_Transformationclass.h"
 #include"hough_Circle_Transformationclass.h"
 #include"finding_Image_Contourclass.h"
+#include"Trademark_Watermarkclass.h"
+#include"Image_Transformationclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -47,6 +49,8 @@ signals:
 	void hough_Line_Transformation_sendData(QString);
 	void hough_Circle_Transformation_sendData(QString);
 	void finding_Image_Contour_sendData(QString);
+	void trademark_Watermark_sendData(QString);
+	void Image_Transformation_sendData(QString);
 
 private slots:
 
@@ -57,6 +61,9 @@ private slots:
 	void Snow_Special_Effects();
 	void Rain_Special_Effects();
 	void Mixing_Graphic_File();
+	void Image_Transformation();
+	void Histogram_Equalization();
+	void Lightness_Contrast();
 	void Trademark_Watermark();
 	void Word_Processing();
 	void Discrete_Fourier_Transform();
@@ -112,6 +119,9 @@ private:
 	QAction *snow_Special_Effects;//下雪特效
 	QAction *rain_Special_Effects;//下雨特效
 	QAction *mixing_Graphic_File;//图文件混合
+	QAction *image_Transformation;//图像变换
+	QAction *histogram_Equalization;//直方图均衡化
+	QAction *lightness_Contrast;//明度/对比度
 	QAction *trademark_Watermark;//商标/水印
 	QAction *word_Processing;//文字处理
 	QAction *discrete_Fourier_Transform;//离散傅里叶变换
@@ -160,4 +170,6 @@ private:
 	hough_Line_Transformationclass *Phough_line_rransformation = new hough_Line_Transformationclass;
 	hough_Circle_Transformationclass *Phough_circle_transformation = new hough_Circle_Transformationclass;
 	finding_Image_Contourclass *Pfinding_image_contour = new finding_Image_Contourclass;
+	Trademark_Watermarkclass *Ptrademark_watermark = new Trademark_Watermarkclass;
+	Image_Transformationclass *Pimage_transformation = new Image_Transformationclass;
 };

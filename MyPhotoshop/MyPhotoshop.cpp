@@ -27,7 +27,8 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(hough_Line_Transformation_sendData(QString)), Phough_line_rransformation, SLOT(hough_Line_Transformation_receiveData(QString)));
 	connect(this, SIGNAL(hough_Circle_Transformation_sendData(QString)), Phough_circle_transformation, SLOT(hough_Circle_Transformation_receiveData(QString)));
 	connect(this, SIGNAL(finding_Image_Contour_sendData(QString)), Pfinding_image_contour, SLOT(finding_Image_Contour_receiveData(QString)));
-
+	connect(this, SIGNAL(trademark_Watermark_sendData(QString)), Ptrademark_watermark, SLOT(Trademark_Watermark_receiveData(QString)));
+	connect(this, SIGNAL(Image_Transformation_sendData(QString)), Pimage_transformation, SLOT(Image_Transformation_receiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -61,6 +62,18 @@ void MyPhotoshop::addMenubar() {
 	trademark_Watermark = new QAction(this);
 	trademark_Watermark->setText(QString::fromLocal8Bit("商标/水印"));
 	connect(trademark_Watermark, SIGNAL(triggered()), this, SLOT(Trademark_Watermark()));
+
+	image_Transformation = new QAction(this);
+	image_Transformation->setText(QString::fromLocal8Bit("图像变换"));
+	connect(image_Transformation, SIGNAL(triggered()), this, SLOT(Image_Transformation()));
+
+	histogram_Equalization = new QAction(this);
+	histogram_Equalization->setText(QString::fromLocal8Bit("直方图均衡化"));
+	connect(histogram_Equalization, SIGNAL(triggered()), this, SLOT(Histogram_Equalization()));
+
+	lightness_Contrast = new QAction(this);
+	lightness_Contrast->setText(QString::fromLocal8Bit("明度/对比度"));
+	connect(lightness_Contrast, SIGNAL(triggered()), this, SLOT(Lightness_Contrast()));
 
 	word_Processing = new QAction(this);
 	word_Processing->setText(QString::fromLocal8Bit("文字处理"));
@@ -205,6 +218,9 @@ void MyPhotoshop::addMenubar() {
 	imageMenu->addAction(snow_Special_Effects);
 	imageMenu->addAction(rain_Special_Effects);
 	imageMenu->addAction(mixing_Graphic_File);
+	imageMenu->addAction(image_Transformation);
+	imageMenu->addAction(histogram_Equalization);
+	imageMenu->addAction(lightness_Contrast);
 	imageMenu->addAction(trademark_Watermark);
 	imageMenu->addAction(word_Processing);
 	imageMenu->addAction(discrete_Fourier_Transform);
@@ -398,8 +414,34 @@ void MyPhotoshop::Mixing_Graphic_File()
 {
 }
 
+void MyPhotoshop::Image_Transformation()
+{
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit Image_Transformation_sendData(QString::fromStdString(name));
+		Pimage_transformation->show();
+	}
+}
+
+void MyPhotoshop::Histogram_Equalization()
+{
+}
+
+void MyPhotoshop::Lightness_Contrast()
+{
+}
+
 void MyPhotoshop::Trademark_Watermark()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit trademark_Watermark_sendData(QString::fromStdString(name));
+		Ptrademark_watermark->show();
+	}
 }
 
 void MyPhotoshop::Word_Processing()

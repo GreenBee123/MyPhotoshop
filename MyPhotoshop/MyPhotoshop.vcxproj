@@ -117,6 +117,7 @@
     <ClCompile Include="finding_Image_Contourclass.cpp" />
     <ClCompile Include="hough_Circle_Transformationclass.cpp" />
     <ClCompile Include="hough_Line_Transformationclass.cpp" />
+    <ClCompile Include="Image_Transformationclass.cpp" />
     <ClCompile Include="Laplacian_Operatorclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyPhotoshop.cpp" />
@@ -124,6 +125,7 @@
     <ClCompile Include="ScreenShotclass.cpp" />
     <ClCompile Include="Snow_Special_Effectsclass.cpp" />
     <ClCompile Include="Sobel_Operatorclass.cpp" />
+    <ClCompile Include="Trademark_Watermarkclass.cpp" />
     <ClCompile Include="Word_Processingclass.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -134,12 +136,14 @@
     <QtUic Include="finding_Image_Contourclass.ui" />
     <QtUic Include="hough_Circle_Transformationclass.ui" />
     <QtUic Include="hough_Line_Transformationclass.ui" />
+    <QtUic Include="Image_Transformationclass.ui" />
     <QtUic Include="Laplacian_Operatorclass.ui" />
     <QtUic Include="MyPhotoshop.ui" />
     <QtUic Include="QR_Codeclass.ui" />
     <QtUic Include="ScreenShotclass.ui" />
     <QtUic Include="Snow_Special_Effectsclass.ui" />
     <QtUic Include="Sobel_Operatorclass.ui" />
+    <QtUic Include="Trademark_Watermarkclass.ui" />
     <QtUic Include="Word_Processingclass.ui" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +205,18 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="finding_Image_Contourclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Trademark_Watermarkclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Image_Transformationclass.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
     </QtMoc>

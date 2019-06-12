@@ -66,6 +66,12 @@
     <ClCompile Include="finding_Image_Contourclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Trademark_Watermarkclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Image_Transformationclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -101,6 +107,12 @@
     <QtMoc Include="finding_Image_Contourclass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Trademark_Watermarkclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Image_Transformationclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -134,6 +146,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="finding_Image_Contourclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Trademark_Watermarkclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Image_Transformationclass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
