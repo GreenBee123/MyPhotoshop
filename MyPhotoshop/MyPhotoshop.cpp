@@ -29,6 +29,14 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(finding_Image_Contour_sendData(QString)), Pfinding_image_contour, SLOT(finding_Image_Contour_receiveData(QString)));
 	connect(this, SIGNAL(trademark_Watermark_sendData(QString)), Ptrademark_watermark, SLOT(Trademark_Watermark_receiveData(QString)));
 	connect(this, SIGNAL(Image_Transformation_sendData(QString)), Pimage_transformation, SLOT(Image_Transformation_receiveData(QString)));
+	connect(this, SIGNAL(Lightness_Contrastclass_sendData(QString)), Plightness_contrast, SLOT(Lightness_Contrast_receiveData(QString)));
+	connect(this, SIGNAL(rain_Special_Effects_sendData(QString)), Prain_special_effect, SLOT(rain_Special_Effects_receiveData(QString)));
+	connect(this, SIGNAL(casting_sendData(QString)), Pcasting, SLOT(casting_receiveData(QString)));
+	connect(this, SIGNAL(nostalgic_colar_sendData(QString)), Pnostalgic_colar, SLOT(nostalgic_colar_receiveData(QString)));
+	connect(this, SIGNAL(comic_Strips_sendData(QString)), Pcomic_Strips, SLOT(comic_Strips_receiveData(QString)));
+	connect(this, SIGNAL(frozen_sendData(QString)), Pfrozen, SLOT(frozen_receiveData(QString)));
+	connect(this, SIGNAL(feather_sendData(QString)), Pfeather, SLOT(feather_receiveData(QString)));
+
 }
 
 void MyPhotoshop::addMenubar() {
@@ -218,12 +226,14 @@ void MyPhotoshop::addMenubar() {
 	imageMenu->addAction(snow_Special_Effects);
 	imageMenu->addAction(rain_Special_Effects);
 	imageMenu->addAction(mixing_Graphic_File);
+	mixing_Graphic_File->setEnabled(false);
 	imageMenu->addAction(image_Transformation);
 	imageMenu->addAction(histogram_Equalization);
 	imageMenu->addAction(lightness_Contrast);
 	imageMenu->addAction(trademark_Watermark);
 	imageMenu->addAction(word_Processing);
 	imageMenu->addAction(discrete_Fourier_Transform);
+	discrete_Fourier_Transform->setEnabled(false);
 
 	filterMenu = menuBar()->addMenu(QString::fromLocal8Bit("滤镜"));
 	filterMenu->addAction(gray);
@@ -255,12 +265,15 @@ void MyPhotoshop::addMenubar() {
 	edgeDetectionMenu->addAction(hough_Circle_Transformation);
 	edgeDetectionMenu->addAction(finding_Image_Contour);
 	edgeDetectionMenu->addAction(create_RectanglesAndEllipses);
+	create_RectanglesAndEllipses->setEnabled(false);
 	edgeDetectionMenu->addAction(image_Moments);
+	image_Moments->setEnabled(false);
 
 
 	aboratory_FunctionMenu = menuBar()->addMenu(QString::fromLocal8Bit("实验室功能"));
 	aboratory_FunctionMenu->addAction(screenshot);
 	aboratory_FunctionMenu->addAction(image_EncryptionAndDecryption);
+	image_EncryptionAndDecryption->setEnabled(false);
 	aboratory_FunctionMenu->addAction(QR_code);
 }
 
@@ -408,6 +421,13 @@ void MyPhotoshop::Snow_Special_Effects()
 
 void MyPhotoshop::Rain_Special_Effects()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit rain_Special_Effects_sendData(QString::fromStdString(name));
+		Prain_special_effect->show();
+	}
 }
 
 void MyPhotoshop::Mixing_Graphic_File()
@@ -431,6 +451,13 @@ void MyPhotoshop::Histogram_Equalization()
 
 void MyPhotoshop::Lightness_Contrast()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit Lightness_Contrastclass_sendData(QString::fromStdString(name));
+		Plightness_contrast->show();
+	}
 }
 
 void MyPhotoshop::Trademark_Watermark()
@@ -595,22 +622,57 @@ void MyPhotoshop::Spread()
 
 void MyPhotoshop::Nostalgic_color()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit nostalgic_colar_sendData(QString::fromStdString(name));
+		Pnostalgic_colar->show();
+	}
 }
 
 void MyPhotoshop::Comic_Strips()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit comic_Strips_sendData(QString::fromStdString(name));
+		Pcomic_Strips->show();
+	}
 }
 
 void MyPhotoshop::Casting()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit casting_sendData(QString::fromStdString(name));
+		Pcasting->show();
+	}
 }
 
 void MyPhotoshop::Frozen()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit frozen_sendData(QString::fromStdString(name));
+		Pfrozen->show();
+	}
 }
 
 void MyPhotoshop::Feather()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit feather_sendData(QString::fromStdString(name));
+		Pfeather->show();
+	}
 }
 
 void MyPhotoshop::Screenshot()

@@ -72,6 +72,30 @@
     <ClCompile Include="Image_Transformationclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lightness_Contrastclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rain_Special_Effectsclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Histogram_Equalizationclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nostalgic_colar_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="comic_Strips_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="castingclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frozenclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="featherclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -113,6 +137,30 @@
     <QtMoc Include="Image_Transformationclass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Lightness_Contrastclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rain_Special_Effectsclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Histogram_Equalizationclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="nostalgic_colar_class.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="comic_Strips_class.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="castingclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="frozenclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="featherclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -152,6 +200,30 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="Image_Transformationclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Lightness_Contrastclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="rain_Special_Effectsclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Histogram_Equalizationclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="nostalgic_colar_class.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="comic_Strips_class.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="castingclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="frozenclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="featherclass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

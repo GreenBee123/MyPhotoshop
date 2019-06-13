@@ -14,6 +14,13 @@
 #include"finding_Image_Contourclass.h"
 #include"Trademark_Watermarkclass.h"
 #include"Image_Transformationclass.h"
+#include"Lightness_Contrastclass.h"
+#include"rain_Special_Effectsclass.h"
+#include"castingclass.h"
+#include"nostalgic_colar_class.h"
+#include"comic_Strips_class.h"
+#include"frozenclass.h"
+#include"featherclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -51,6 +58,13 @@ signals:
 	void finding_Image_Contour_sendData(QString);
 	void trademark_Watermark_sendData(QString);
 	void Image_Transformation_sendData(QString);
+	void Lightness_Contrastclass_sendData(QString);
+	void rain_Special_Effects_sendData(QString);
+	void casting_sendData(QString);
+	void nostalgic_colar_sendData(QString);
+	void comic_Strips_sendData(QString);
+	void frozen_sendData(QString);
+	void feather_sendData(QString);
 
 private slots:
 
@@ -172,4 +186,11 @@ private:
 	finding_Image_Contourclass *Pfinding_image_contour = new finding_Image_Contourclass;
 	Trademark_Watermarkclass *Ptrademark_watermark = new Trademark_Watermarkclass;
 	Image_Transformationclass *Pimage_transformation = new Image_Transformationclass;
+	Lightness_Contrastclass *Plightness_contrast = new Lightness_Contrastclass;
+	rain_Special_Effectsclass *Prain_special_effect = new rain_Special_Effectsclass;
+	castingclass*Pcasting = new castingclass;
+	nostalgic_colar_class *Pnostalgic_colar = new nostalgic_colar_class;
+	comic_Strips_class * Pcomic_Strips = new comic_Strips_class;
+	frozenclass * Pfrozen = new frozenclass;
+	featherclass * Pfeather = new featherclass;
 };
