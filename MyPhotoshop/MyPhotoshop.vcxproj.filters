@@ -96,6 +96,12 @@
     <ClCompile Include="featherclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="zhongzhi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="diaoke.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -161,6 +167,12 @@
     <QtMoc Include="featherclass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="zhongzhi.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="diaoke.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -224,6 +236,12 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="featherclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="zhongzhi.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="diaoke.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

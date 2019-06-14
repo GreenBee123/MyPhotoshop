@@ -116,6 +116,7 @@
     <ClCompile Include="Canny_EdgeDetectionclass.cpp" />
     <ClCompile Include="castingclass.cpp" />
     <ClCompile Include="comic_Strips_class.cpp" />
+    <ClCompile Include="diaoke.cpp" />
     <ClCompile Include="featherclass.cpp" />
     <ClCompile Include="finding_Image_Contourclass.cpp" />
     <ClCompile Include="frozenclass.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Sobel_Operatorclass.cpp" />
     <ClCompile Include="Trademark_Watermarkclass.cpp" />
     <ClCompile Include="Word_Processingclass.cpp" />
+    <ClCompile Include="zhongzhi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -146,6 +148,7 @@
     <QtUic Include="Canny_EdgeDetectionclass.ui" />
     <QtUic Include="castingclass.ui" />
     <QtUic Include="comic_Strips_class.ui" />
+    <QtUic Include="diaoke.ui" />
     <QtUic Include="featherclass.ui" />
     <QtUic Include="finding_Image_Contourclass.ui" />
     <QtUic Include="frozenclass.ui" />
@@ -164,6 +167,7 @@
     <QtUic Include="Sobel_Operatorclass.ui" />
     <QtUic Include="Trademark_Watermarkclass.ui" />
     <QtUic Include="Word_Processingclass.ui" />
+    <QtUic Include="zhongzhi.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="MyPhotoshop.qrc" />
@@ -284,6 +288,18 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="featherclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="zhongzhi.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="diaoke.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
     </QtMoc>

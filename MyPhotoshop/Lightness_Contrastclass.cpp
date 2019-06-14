@@ -27,7 +27,7 @@ void Lightness_Contrastclass::on_horizontalSlider_valueChanged(int alpha)
 	ui.label_3->clear();
 	ui.label_3->setText(QString::number(Alpha));
 
-	/// 转换公式 new_image(i,j) = alpha*image(i,j) + beta
+	// 转换公式 new_image(i,j) = alpha*image(i,j) + beta
 	for (int y = 0; y < Lightness_Contrast_image.rows; y++)
 	{
 		for (int x = 0; x < Lightness_Contrast_image.cols; x++)

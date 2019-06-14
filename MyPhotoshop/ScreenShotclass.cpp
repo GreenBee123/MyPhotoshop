@@ -93,7 +93,7 @@ void my_mouse_callback(int event, int x, int y,
 		}
 		// 采集图像
 		Mat temp(ScreenShot_image, box);
-		imshow("Crop", temp);
+		//imshow("Crop", temp);
 		imwrite(str, temp);
 		// 绘制选取内容
 		rectangle(ScreenShot_image, Point(box.x, box.y),

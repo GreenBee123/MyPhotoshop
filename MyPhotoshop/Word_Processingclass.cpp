@@ -101,13 +101,13 @@ void Word_Processingclass::on_Btnchange_clicked()
 	if (is_frame) {
 		rectangle(after_image_word_processing, textOrg + Point(0, baseline),
 			textOrg + Point(textSize.width, -textSize.height),
-			Scalar(B, G, R));
+			Scalar(B, G, R), thickness);
 	}
 	// ... and the baseline first
 	if (is_underline) {
 		line(after_image_word_processing, textOrg + Point(0, thickness),
 			textOrg + Point(textSize.width, thickness),
-			Scalar(B, G, R));
+			Scalar(B, G, R), thickness);
 	}
 
 	// then put the text itself

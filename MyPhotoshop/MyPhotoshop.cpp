@@ -36,7 +36,8 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(comic_Strips_sendData(QString)), Pcomic_Strips, SLOT(comic_Strips_receiveData(QString)));
 	connect(this, SIGNAL(frozen_sendData(QString)), Pfrozen, SLOT(frozen_receiveData(QString)));
 	connect(this, SIGNAL(feather_sendData(QString)), Pfeather, SLOT(feather_receiveData(QString)));
-
+	connect(this, SIGNAL(zhong_zhi_sendData(QString)), Zhongzhi, SLOT(Zhong_zhireceiveData(QString)));
+	connect(this, SIGNAL(diao_ke_sendData(QString)), Diaoke, SLOT(Diao_kereceiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -123,10 +124,8 @@ void MyPhotoshop::addMenubar() {
 	image_Moments->setText(QString::fromLocal8Bit("图像矩"));
 	connect(image_Moments, SIGNAL(triggered()), this, SLOT(Image_Moments()));
 
-
-
 	gray = new QAction(this);
-	gray->setText(QString::fromLocal8Bit("灰度化"));
+	gray->setText(QString::fromLocal8Bit("基本操作"));
 	connect(gray, SIGNAL(triggered()), this, SLOT(Gray()));
 
 	binaryzation = new QAction(this);
@@ -238,10 +237,15 @@ void MyPhotoshop::addMenubar() {
 	filterMenu = menuBar()->addMenu(QString::fromLocal8Bit("滤镜"));
 	filterMenu->addAction(gray);
 	filterMenu->addAction(binaryzation);
+	binaryzation->setEnabled(false);
 	filterMenu->addAction(gaussion_Filter);
+	gaussion_Filter->setEnabled(false);;
 	filterMenu->addAction(mean_Filter);
+	mean_Filter->setEnabled(false);;
 	filterMenu->addAction(meadian_Filter);
+	meadian_Filter->setEnabled(false);
 	filterMenu->addAction(box_Filter);
+	box_Filter->setEnabled(false);
 	filterMenu->addAction(carve_Relief);
 	filterMenu->addAction(expansion_Backlog);
 	filterMenu->addAction(color_Change);
@@ -558,10 +562,18 @@ void MyPhotoshop::Create_RectanglesAndEllipses()
 
 void MyPhotoshop::Image_Moments()
 {
+
 }
 
 void MyPhotoshop::Gray()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit zhong_zhi_sendData(QString::fromStdString(name));
+		Zhongzhi->show();
+	}
 }
 
 void MyPhotoshop::Binaryzation()
@@ -578,6 +590,7 @@ void MyPhotoshop::Mean_Filter()
 
 void MyPhotoshop::Meadian_Filter()
 {
+	
 }
 
 void MyPhotoshop::Box_Filter()
@@ -586,6 +599,13 @@ void MyPhotoshop::Box_Filter()
 
 void MyPhotoshop::Carve_Relief()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit diao_ke_sendData(QString::fromStdString(name));
+		Diaoke->show();
+	}
 }
 
 void MyPhotoshop::Expansion_Backlog()

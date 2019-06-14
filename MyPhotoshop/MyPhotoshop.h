@@ -21,6 +21,8 @@
 #include"comic_Strips_class.h"
 #include"frozenclass.h"
 #include"featherclass.h"
+#include"zhongzhi.h"
+#include"diaoke.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -65,6 +67,9 @@ signals:
 	void comic_Strips_sendData(QString);
 	void frozen_sendData(QString);
 	void feather_sendData(QString);
+	void zhong_zhi_sendData(QString);
+	void diao_ke_sendData(QString);
+
 
 private slots:
 
@@ -193,4 +198,6 @@ private:
 	comic_Strips_class * Pcomic_Strips = new comic_Strips_class;
 	frozenclass * Pfrozen = new frozenclass;
 	featherclass * Pfeather = new featherclass;
+	zhongzhi * Zhongzhi = new zhongzhi;
+	diaoke*Diaoke = new diaoke;
 };

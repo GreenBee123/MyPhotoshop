@@ -62,7 +62,7 @@ void Trademark_Watermarkclass::on_BtnpushButton_4_clicked()
 	Trademark_Watermark_imageROI = Trademark_Watermark_iamge1(Rect((ui.textEdit_3->toPlainText()).toInt(), (ui.textEdit_4->toPlainText()).toInt(), (ui.textEdit->toPlainText()).toInt(), (ui.textEdit_2->toPlainText()).toInt()));
 
 	// 加入商标
-	addWeighted(Trademark_Watermark_imageROI, 1.0, opencvlogo, 0.3, 0., Trademark_Watermark_imageROI);
+	addWeighted(Trademark_Watermark_imageROI, 1.0, opencvlogo, 0.2, 0., Trademark_Watermark_imageROI);
 
 	Trademark_Watermark_img2 = cvMat2QImage(Trademark_Watermark_image);
 
