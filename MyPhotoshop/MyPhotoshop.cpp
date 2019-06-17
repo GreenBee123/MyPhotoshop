@@ -38,6 +38,10 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(feather_sendData(QString)), Pfeather, SLOT(feather_receiveData(QString)));
 	connect(this, SIGNAL(zhong_zhi_sendData(QString)), Zhongzhi, SLOT(Zhong_zhireceiveData(QString)));
 	connect(this, SIGNAL(diao_ke_sendData(QString)), Diaoke, SLOT(Diao_kereceiveData(QString)));
+	connect(this, SIGNAL(wind_sendData(QString)), Pwind, SLOT(wind_receiveData(QString)));
+	connect(this, SIGNAL(vortex_sendData(QString)), Pvortex, SLOT(vortex_receiveData(QString)));
+	connect(this, SIGNAL(sketch_sendData(QString)), Psketch, SLOT(sketch_receiveData(QString)));
+	connect(this, SIGNAL(spread_sendData(QString)), Pspread, SLOT(spread_receiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -626,18 +630,46 @@ void MyPhotoshop::Wave()
 
 void MyPhotoshop::Wind()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit wind_sendData(QString::fromStdString(name));
+		Pwind->show();
+	}
 }
 
 void MyPhotoshop::Vortex()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit vortex_sendData(QString::fromStdString(name));
+		Pvortex->show();
+	}
 }
 
 void MyPhotoshop::Sketch()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit sketch_sendData(QString::fromStdString(name));
+		Psketch->show();
+	}
 }
 
 void MyPhotoshop::Spread()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit spread_sendData(QString::fromStdString(name));
+		Pspread->show();
+	}
 }
 
 void MyPhotoshop::Nostalgic_color()

@@ -23,6 +23,10 @@
 #include"featherclass.h"
 #include"zhongzhi.h"
 #include"diaoke.h"
+#include"Windclass.h"
+#include"Vortexclass.h"
+#include "Sketchclass.h"
+#include "Spreadclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -69,6 +73,11 @@ signals:
 	void feather_sendData(QString);
 	void zhong_zhi_sendData(QString);
 	void diao_ke_sendData(QString);
+
+	void wind_sendData(QString);
+	void vortex_sendData(QString);
+	void sketch_sendData(QString);
+	void spread_sendData(QString);
 
 
 private slots:
@@ -200,4 +209,9 @@ private:
 	featherclass * Pfeather = new featherclass;
 	zhongzhi * Zhongzhi = new zhongzhi;
 	diaoke*Diaoke = new diaoke;
+
+	Windclass *Pwind = new Windclass;
+	Vortexclass *Pvortex = new Vortexclass;
+	Sketchclass *Psketch = new Sketchclass;
+	Spreadclass *Pspread = new Spreadclass;
 };

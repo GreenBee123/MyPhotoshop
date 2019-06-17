@@ -102,6 +102,18 @@
     <ClCompile Include="diaoke.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vortexclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Windclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spreadclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sketchclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -173,6 +185,18 @@
     <QtMoc Include="diaoke.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Vortexclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Windclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Spreadclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Sketchclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -242,6 +266,18 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="diaoke.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Spreadclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Vortexclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Windclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Sketchclass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
