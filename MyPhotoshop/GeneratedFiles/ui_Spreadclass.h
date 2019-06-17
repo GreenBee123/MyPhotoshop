@@ -28,7 +28,7 @@ public:
     {
         if (Spreadclass->objectName().isEmpty())
             Spreadclass->setObjectName(QString::fromUtf8("Spreadclass"));
-        Spreadclass->resize(1009, 693);
+        Spreadclass->resize(1009, 692);
         scrollArea = new QScrollArea(Spreadclass);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setGeometry(QRect(9, 16, 991, 661));

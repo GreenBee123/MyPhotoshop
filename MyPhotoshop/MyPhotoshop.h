@@ -92,6 +92,7 @@ private slots:
 	void Image_Transformation();
 	void Histogram_Equalization();
 	void Lightness_Contrast();
+	void Hue_Saturation();
 	void Trademark_Watermark();
 	void Word_Processing();
 	void Discrete_Fourier_Transform();
@@ -126,6 +127,9 @@ private slots:
 	void Casting();
 	void Frozen();
 	void Feather();
+	void Oil_Painting();
+	void Blaze();
+	void Load_Selection();
 
 	void Screenshot();
 	void Image_EncryptionAndDecryption();
@@ -150,6 +154,7 @@ private:
 	QAction *image_Transformation;//图像变换
 	QAction *histogram_Equalization;//直方图均衡化
 	QAction *lightness_Contrast;//明度/对比度
+	QAction *hue_saturation;//色相/饱和度
 	QAction *trademark_Watermark;//商标/水印
 	QAction *word_Processing;//文字处理
 	QAction *discrete_Fourier_Transform;//离散傅里叶变换
@@ -183,6 +188,9 @@ private:
 	QAction *casting;//熔铸
 	QAction *frozen;//冰冻
 	QAction *feather;//羽化
+	QAction *oil_painting;//油画
+	QAction *blaze;//强光
+	QAction *load_selection;//载入选区
 
 	QAction *screenshot;//屏幕截图
 	QAction *image_EncryptionAndDecryption;//图像加密/图像解密

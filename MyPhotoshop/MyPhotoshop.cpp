@@ -81,12 +81,16 @@ void MyPhotoshop::addMenubar() {
 	connect(image_Transformation, SIGNAL(triggered()), this, SLOT(Image_Transformation()));
 
 	histogram_Equalization = new QAction(this);
-	histogram_Equalization->setText(QString::fromLocal8Bit("直方图均衡化"));
+	histogram_Equalization->setText(QString::fromLocal8Bit("图像增强"));
 	connect(histogram_Equalization, SIGNAL(triggered()), this, SLOT(Histogram_Equalization()));
 
 	lightness_Contrast = new QAction(this);
 	lightness_Contrast->setText(QString::fromLocal8Bit("明度/对比度"));
 	connect(lightness_Contrast, SIGNAL(triggered()), this, SLOT(Lightness_Contrast()));
+
+	hue_saturation = new QAction(this);
+	hue_saturation->setText(QString::fromLocal8Bit("色相/饱和度"));
+	connect(hue_saturation, SIGNAL(triggered()), this, SLOT(Hue_Saturation()));
 
 	word_Processing = new QAction(this);
 	word_Processing->setText(QString::fromLocal8Bit("文字处理"));
@@ -208,6 +212,18 @@ void MyPhotoshop::addMenubar() {
 	feather->setText(QString::fromLocal8Bit("羽化"));
 	connect(feather, SIGNAL(triggered()), this, SLOT(Feather()));
 
+	oil_painting = new QAction(this);
+	oil_painting->setText(QString::fromLocal8Bit("油画"));
+	connect(oil_painting, SIGNAL(triggered()), this, SLOT(Oil_Painting()));
+
+	blaze = new QAction(this);
+	blaze->setText(QString::fromLocal8Bit("强光"));
+	connect(blaze, SIGNAL(triggered()), this, SLOT(Blaze()));
+
+	load_selection = new QAction(this);
+	load_selection->setText(QString::fromLocal8Bit("载入选区"));
+	connect(load_selection, SIGNAL(triggered()), this, SLOT(Load_Selection()));
+
 	screenshot = new QAction(this);
 	screenshot->setText(QString::fromLocal8Bit("图像截图"));
 	connect(screenshot, SIGNAL(triggered()), this, SLOT(Screenshot()));
@@ -233,6 +249,7 @@ void MyPhotoshop::addMenubar() {
 	imageMenu->addAction(image_Transformation);
 	imageMenu->addAction(histogram_Equalization);
 	imageMenu->addAction(lightness_Contrast);
+	imageMenu->addAction(hue_saturation);
 	imageMenu->addAction(trademark_Watermark);
 	imageMenu->addAction(word_Processing);
 	imageMenu->addAction(discrete_Fourier_Transform);
@@ -264,6 +281,10 @@ void MyPhotoshop::addMenubar() {
 	filterMenu->addAction(casting);
 	filterMenu->addAction(frozen);
 	filterMenu->addAction(feather);
+	filterMenu->addAction(oil_painting);
+	filterMenu->addAction(blaze);
+	filterMenu->addAction(load_selection);
+
 
 	edgeDetectionMenu = menuBar()->addMenu(QString::fromLocal8Bit("边缘检测"));
 	edgeDetectionMenu->addAction(sobel_Operator);
@@ -466,6 +487,10 @@ void MyPhotoshop::Lightness_Contrast()
 		emit Lightness_Contrastclass_sendData(QString::fromStdString(name));
 		Plightness_contrast->show();
 	}
+}
+
+void MyPhotoshop::Hue_Saturation()
+{
 }
 
 void MyPhotoshop::Trademark_Watermark()
@@ -725,6 +750,18 @@ void MyPhotoshop::Feather()
 		emit feather_sendData(QString::fromStdString(name));
 		Pfeather->show();
 	}
+}
+
+void MyPhotoshop::Oil_Painting()
+{
+}
+
+void MyPhotoshop::Blaze()
+{
+}
+
+void MyPhotoshop::Load_Selection()
+{
 }
 
 void MyPhotoshop::Screenshot()
