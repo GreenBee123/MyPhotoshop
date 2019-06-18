@@ -1,23 +1,318 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>Histogram_Equalizationclass</class>
- <widget class="QWidget" name="Histogram_Equalizationclass" >
-  <property name="objectName" >
-   <string notr="true">Histogram_Equalizationclass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QWidget" name="Histogram_Equalizationclass">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>400</width>
-	<height>300</height>
+    <x>0</x>
+    <y>0</y>
+    <width>1093</width>
+    <height>832</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Histogram_Equalizationclass</string>
   </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1069</width>
+        <height>808</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="1">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>img</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>显示效果</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>直方图</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>图像增强选项</string>
+         </property>
+         <widget class="QWidget" name="gridLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>20</y>
+            <width>241</width>
+            <height>271</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton">
+             <property name="text">
+              <string>基于直方图变换</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="radioButton_2">
+             <property name="text">
+              <string>基于拉普拉斯算子</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QRadioButton" name="radioButton_6">
+             <property name="text">
+              <string>高反差保留</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QRadioButton" name="radioButton_5">
+             <property name="text">
+              <string>指数变换</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QRadioButton" name="radioButton_4">
+             <property name="text">
+              <string>基于伽马变换</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QRadioButton" name="radioButton_3">
+             <property name="text">
+              <string>基于对数Log变换</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QRadioButton" name="radioButton_7">
+             <property name="text">
+              <string>过度曝光处理</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
-</UI>
+ <connections>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>925</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1088</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_2_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>940</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1088</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_3_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>924</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1082</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_4_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>903</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1096</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_5_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1041</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1085</x>
+     <y>257</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_6_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>887</x>
+     <y>276</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1085</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>Histogram_Equalizationclass</receiver>
+   <slot>on_radioBtn_7_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>916</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1088</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_radioBtn_clicked()</slot>
+  <slot>on_radioBtn_2_clicked()</slot>
+  <slot>on_radioBtn_3_clicked()</slot>
+  <slot>on_radioBtn_4_clicked()</slot>
+  <slot>on_radioBtn_5_clicked()</slot>
+  <slot>on_radioBtn_6_clicked()</slot>
+  <slot>on_radioBtn_7_clicked()</slot>
+ </slots>
+</ui>

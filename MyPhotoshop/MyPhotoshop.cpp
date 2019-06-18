@@ -42,6 +42,14 @@ void MyPhotoshop::addConncet() {
 	connect(this, SIGNAL(vortex_sendData(QString)), Pvortex, SLOT(vortex_receiveData(QString)));
 	connect(this, SIGNAL(sketch_sendData(QString)), Psketch, SLOT(sketch_receiveData(QString)));
 	connect(this, SIGNAL(spread_sendData(QString)), Pspread, SLOT(spread_receiveData(QString)));
+	connect(this, SIGNAL(expansion_Backlog_sendData(QString)), Pexpansion_backlog, SLOT(expansion_Backlog_receiveData(QString)));
+	connect(this, SIGNAL(wave_sendData(QString)), Pwave, SLOT(wave_receiveData(QString)));
+	connect(this, SIGNAL(radial_Blur_sendData(QString)), Pradial_blur, SLOT(radial_Blur_receiveData(QString)));
+	connect(this, SIGNAL(histogram_Equalization_sendData(QString)), Phistogram_equalization, SLOT(Histogram_Equalization_receiveData(QString)));
+	connect(this, SIGNAL(hue_saturation_sendData(QString)), Phue_saturation, SLOT(hue_saturation_receiveData(QString)));
+	connect(this, SIGNAL(blaze_sendData(QString)), Pblaze, SLOT(blaze_receiveData(QString)));
+	connect(this, SIGNAL(oil_Painting_sendData(QString)), Poil_painting, SLOT(oil_Painting_receiveData(QString)));
+	connect(this, SIGNAL(load_Selection_sendData(QString)), Pload_Selection, SLOT(load_Selection_receiveData(QString)));
 }
 
 void MyPhotoshop::addMenubar() {
@@ -174,7 +182,7 @@ void MyPhotoshop::addMenubar() {
 
 	wave = new QAction(this);
 	wave->setText(QString::fromLocal8Bit("²¨ÀË"));
-	connect(saveFile, SIGNAL(triggered()), this, SLOT(Wave()));
+	connect(wave, SIGNAL(triggered()), this, SLOT(Wave()));
 
 	wind = new QAction(this);
 	wind->setText(QString::fromLocal8Bit("·ç"));
@@ -476,6 +484,13 @@ void MyPhotoshop::Image_Transformation()
 
 void MyPhotoshop::Histogram_Equalization()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit histogram_Equalization_sendData(QString::fromStdString(name));
+		Phistogram_equalization->show();
+	}
 }
 
 void MyPhotoshop::Lightness_Contrast()
@@ -491,6 +506,13 @@ void MyPhotoshop::Lightness_Contrast()
 
 void MyPhotoshop::Hue_Saturation()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit hue_saturation_sendData(QString::fromStdString(name));
+		Phue_saturation->show();
+	}
 }
 
 void MyPhotoshop::Trademark_Watermark()
@@ -639,6 +661,13 @@ void MyPhotoshop::Carve_Relief()
 
 void MyPhotoshop::Expansion_Backlog()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit expansion_Backlog_sendData(QString::fromStdString(name));
+		Pexpansion_backlog->show();
+	}
 }
 
 void MyPhotoshop::Color_Change()
@@ -647,10 +676,24 @@ void MyPhotoshop::Color_Change()
 
 void MyPhotoshop::Radial_Blur()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit radial_Blur_sendData(QString::fromStdString(name));
+		Pradial_blur->show();
+	}
 }
 
 void MyPhotoshop::Wave()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit wave_sendData(QString::fromStdString(name));
+		Pwave->show();
+	}
 }
 
 void MyPhotoshop::Wind()
@@ -754,14 +797,35 @@ void MyPhotoshop::Feather()
 
 void MyPhotoshop::Oil_Painting()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit oil_Painting_sendData(QString::fromStdString(name));
+		Poil_painting->show();
+	}
 }
 
 void MyPhotoshop::Blaze()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit blaze_sendData(QString::fromStdString(name));
+		Pblaze->show();
+	}
 }
 
 void MyPhotoshop::Load_Selection()
 {
+	if (!image.data) {
+		no_ImageData();
+	}
+	else {
+		emit load_Selection_sendData(QString::fromStdString(name));
+		Pload_Selection->show();
+	}
 }
 
 void MyPhotoshop::Screenshot()

@@ -27,6 +27,14 @@
 #include"Vortexclass.h"
 #include "Sketchclass.h"
 #include "Spreadclass.h"
+#include "Radial_Blurclass.h"
+#include"Waveclass.h"
+#include "Expansion_Backlogclass.h"
+#include"Histogram_Equalizationclass.h"
+#include"Hue_Saturationclass.h"
+#include "Blazeclass.h"
+#include "Oil_Paintingclass.h"
+#include"Load_Selectionclass.h"
 #include<opencv2/opencv.hpp>
 #include<qtextcodec.h>
 #include<qfiledialog.h>
@@ -79,6 +87,14 @@ signals:
 	void sketch_sendData(QString);
 	void spread_sendData(QString);
 
+	void expansion_Backlog_sendData(QString);
+	void wave_sendData(QString);
+	void radial_Blur_sendData(QString);
+	void histogram_Equalization_sendData(QString);
+	void hue_saturation_sendData(QString );
+	void blaze_sendData(QString);
+	void oil_Painting_sendData(QString);
+	void load_Selection_sendData(QString);
 
 private slots:
 
@@ -222,4 +238,16 @@ private:
 	Vortexclass *Pvortex = new Vortexclass;
 	Sketchclass *Psketch = new Sketchclass;
 	Spreadclass *Pspread = new Spreadclass;
+
+	Expansion_Backlogclass *Pexpansion_backlog = new Expansion_Backlogclass;
+	Waveclass *Pwave = new Waveclass;
+	Radial_Blurclass *Pradial_blur = new Radial_Blurclass;
+
+	Histogram_Equalizationclass *Phistogram_equalization = new Histogram_Equalizationclass;
+
+	Hue_Saturationclass *Phue_saturation = new Hue_Saturationclass;
+
+	Blazeclass *Pblaze = new Blazeclass;
+	Oil_Paintingclass *Poil_painting = new Oil_Paintingclass;
+	Load_Selectionclass *Pload_Selection = new Load_Selectionclass;
 };

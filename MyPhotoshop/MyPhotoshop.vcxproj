@@ -113,23 +113,30 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Blazeclass.cpp" />
     <ClCompile Include="Canny_EdgeDetectionclass.cpp" />
     <ClCompile Include="castingclass.cpp" />
     <ClCompile Include="comic_Strips_class.cpp" />
     <ClCompile Include="diaoke.cpp" />
+    <ClCompile Include="Expansion_Backlogclass.cpp" />
     <ClCompile Include="featherclass.cpp" />
     <ClCompile Include="finding_Image_Contourclass.cpp" />
     <ClCompile Include="frozenclass.cpp" />
+    <ClCompile Include="histogramclass.cpp" />
     <ClCompile Include="Histogram_Equalizationclass.cpp" />
     <ClCompile Include="hough_Circle_Transformationclass.cpp" />
     <ClCompile Include="hough_Line_Transformationclass.cpp" />
+    <ClCompile Include="Hue_Saturationclass.cpp" />
     <ClCompile Include="Image_Transformationclass.cpp" />
     <ClCompile Include="Laplacian_Operatorclass.cpp" />
     <ClCompile Include="Lightness_Contrastclass.cpp" />
+    <ClCompile Include="Load_Selectionclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyPhotoshop.cpp" />
     <ClCompile Include="nostalgic_colar_class.cpp" />
+    <ClCompile Include="Oil_Paintingclass.cpp" />
     <ClCompile Include="QR_Codeclass.cpp" />
+    <ClCompile Include="Radial_Blurclass.cpp" />
     <ClCompile Include="rain_Special_Effectsclass.cpp" />
     <ClCompile Include="ScreenShotclass.cpp" />
     <ClCompile Include="Sketchclass.cpp" />
@@ -138,6 +145,7 @@
     <ClCompile Include="Spreadclass.cpp" />
     <ClCompile Include="Trademark_Watermarkclass.cpp" />
     <ClCompile Include="Vortexclass.cpp" />
+    <ClCompile Include="Waveclass.cpp" />
     <ClCompile Include="Windclass.cpp" />
     <ClCompile Include="Word_Processingclass.cpp" />
     <ClCompile Include="zhongzhi.cpp" />
@@ -149,22 +157,29 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="Blazeclass.ui" />
     <QtUic Include="Canny_EdgeDetectionclass.ui" />
     <QtUic Include="castingclass.ui" />
     <QtUic Include="comic_Strips_class.ui" />
     <QtUic Include="diaoke.ui" />
+    <QtUic Include="Expansion_Backlogclass.ui" />
     <QtUic Include="featherclass.ui" />
     <QtUic Include="finding_Image_Contourclass.ui" />
     <QtUic Include="frozenclass.ui" />
+    <QtUic Include="histogramclass.ui" />
     <QtUic Include="Histogram_Equalizationclass.ui" />
     <QtUic Include="hough_Circle_Transformationclass.ui" />
     <QtUic Include="hough_Line_Transformationclass.ui" />
+    <QtUic Include="Hue_Saturationclass.ui" />
     <QtUic Include="Image_Transformationclass.ui" />
     <QtUic Include="Laplacian_Operatorclass.ui" />
     <QtUic Include="Lightness_Contrastclass.ui" />
+    <QtUic Include="Load_Selectionclass.ui" />
     <QtUic Include="MyPhotoshop.ui" />
     <QtUic Include="nostalgic_colar_class.ui" />
+    <QtUic Include="Oil_Paintingclass.ui" />
     <QtUic Include="QR_Codeclass.ui" />
+    <QtUic Include="Radial_Blurclass.ui" />
     <QtUic Include="rain_Special_Effectsclass.ui" />
     <QtUic Include="ScreenShotclass.ui" />
     <QtUic Include="Sketchclass.ui" />
@@ -173,6 +188,7 @@
     <QtUic Include="Spreadclass.ui" />
     <QtUic Include="Trademark_Watermarkclass.ui" />
     <QtUic Include="Vortexclass.ui" />
+    <QtUic Include="Waveclass.ui" />
     <QtUic Include="Windclass.ui" />
     <QtUic Include="Word_Processingclass.ui" />
     <QtUic Include="zhongzhi.ui" />
@@ -332,6 +348,54 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Sketchclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Waveclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Radial_Blurclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Expansion_Backlogclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="histogramclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Hue_Saturationclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Oil_Paintingclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Blazeclass.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Load_Selectionclass.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets</IncludePath>
     </QtMoc>

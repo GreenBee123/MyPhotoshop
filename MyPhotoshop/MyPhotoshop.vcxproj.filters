@@ -114,6 +114,30 @@
     <ClCompile Include="Sketchclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Waveclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Expansion_Backlogclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Radial_Blurclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="histogramclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hue_Saturationclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Oil_Paintingclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Blazeclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Load_Selectionclass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MyPhotoshop.h">
@@ -197,6 +221,30 @@
     <QtMoc Include="Sketchclass.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Waveclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Radial_Blurclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Expansion_Backlogclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="histogramclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Hue_Saturationclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Oil_Paintingclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Blazeclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Load_Selectionclass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MyPhotoshop.ui">
@@ -278,6 +326,30 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="Sketchclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Waveclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Radial_Blurclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Expansion_Backlogclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="histogramclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Hue_Saturationclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Oil_Paintingclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Blazeclass.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Load_Selectionclass.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
